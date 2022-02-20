@@ -15,7 +15,7 @@ const int N = 1000000;
 
 void primeSieve(vector<int> &sieve){
 	sieve[0] = sieve[1] = 0;
-	for(int i = 2 ; i <= N ; i++){
+	for(int i = 2 ; i*i <= N ; i++){
 		if(sieve[i] == 1){
 			for(int j = i*i ; j <= N ; j += i){
 				sieve[j] = 0;
